@@ -5,9 +5,9 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/contexts/AuthContext';
-import { UserMenu } from '@/components/UserMenu';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { AuthModal } from '@/components/AuthModal';
+// import { UserMenu } from '@/components/UserMenu';
+// import { ThemeToggle } from '@/components/ThemeToggle';
+// import { AuthModal } from '@/components/AuthModal';
 import {
   Pagination,
   PaginationContent,
@@ -241,7 +241,7 @@ const Index = () => {
               <Briefcase className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">JobSeeker</h1>
             </div>
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <ThemeToggle />
               {user ? (
                 <UserMenu />
@@ -258,7 +258,7 @@ const Index = () => {
                   </Button>
                 </>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
@@ -632,7 +632,7 @@ const Index = () => {
       </footer>
 
       {/* Auth Modal */}
-      {showModal && <AuthModal isOpen={showModal} onClose={() => setShowModal(false)} />}
+      {/* {showModal && <AuthModal isOpen={showModal} onClose={() => setShowModal(false)} />} */}
 
 
       {/* Welcome Popup */}
