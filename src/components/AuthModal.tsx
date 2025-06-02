@@ -186,7 +186,5 @@ export default function HomePage() {
   );
 }
 
-function AuthModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  // full modal code here
-}
+
 

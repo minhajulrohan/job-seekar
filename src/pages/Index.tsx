@@ -226,7 +226,7 @@ const Index = () => {
     setSortBy('newest');
   };
 
-  const openAuthModal = (mode: 'login' | 'signup') => {
+  const showModal = (mode: 'login' | 'signup') => {
     setAuthMode(mode);
     setIsAuthModalOpen(true);
   };
@@ -247,12 +247,12 @@ const Index = () => {
                 <UserMenu />
               ) : (
                 <>
-                  <Button variant="ghost" onClick={() => openAuthModal('login')}>
+                  <Button variant="ghost" onClick={() => showModal('login')}>
                     Sign In
                   </Button>
                   <Button 
                     className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
-                    onClick={() => openAuthModal('signup')}
+                    onClick={() => showModal('signup')}
                   >
                     Sign Up
                   </Button>
@@ -632,11 +632,8 @@ const Index = () => {
       </footer>
 
       {/* Auth Modal */}
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)}
-        initialMode={authMode}
-      />
+      {showModal && <AuthModal isOpen={showModal} onClose={() => setShowModal(false)} />}
+
 
       {/* Welcome Popup */}
       {showWelcomePopup && (
