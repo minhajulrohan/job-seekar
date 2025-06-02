@@ -185,3 +185,8 @@ export default function HomePage() {
     </AuthProvider>
   );
 }
+
+function AuthModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  // full modal code here
+}
+
