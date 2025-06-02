@@ -5,10 +5,9 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/contexts/AuthContext';
-// import { UserMenu } from '@/components/UserMenu';
+import { UserMenu } from '@/components/UserMenu';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { AuthModal } from '@/components/AuthModal';
-import { Toaster } from 'sonner';
+
 
 import {
   Pagination,
@@ -237,34 +236,33 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Header */}
       <header className="bg-white dark:bg-gray-800 shadow-sm border-b dark:border-gray-700">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div className="flex items-center justify-between">
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <Briefcase className="h-8 w-8 text-blue-600 dark:text-blue-400" />
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">JobSeeker</h1>
-      </div>
-
-      {/* Right Side: Theme + Auth */}
-      <div className="flex items-center space-x-4">
-        <ThemeToggle />
-
-        {user ? (
-          <p className="text-sm text-gray-700 dark:text-gray-300">Logged in as {user.email}</p>
-        ) : (
-          <>
-            <Button onClick={() => setShowModal(true)}>Login / Signup</Button>
-            {showModal && (
-              <AuthModal isOpen={showModal} onClose={() => setShowModal(false)} />
-            )}
-          </>
-        )}
-      </div>
-    </div>
-  </div>
-</header>
-
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Briefcase className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">JobSeeker</h1>
+            </div>
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              {/* {user ? (
+                <UserMenu />
+              ) : (
+                <>
+                  <Button variant="ghost" onClick={() => showModal('login')}>
+                    Sign In
+                  </Button>
+                  <Button 
+                    className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+                    onClick={() => showModal('signup')}
+                  >
+                    Sign Up
+                  </Button>
+                </>
+              )} */}
+            </div>
+          </div>
+        </div>
+      </header>
       {/* Hero Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
