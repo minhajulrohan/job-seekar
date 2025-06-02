@@ -645,7 +645,7 @@ const Index = () => {
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome to JobSeeker!</h2>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Discover thousands of job opportunities from top companies worldwide. Start your career journey today!
+                Discover Hundread of job opportunities from top companies worldwide. Start your career journey today!
               </p>
               <div className="space-y-3">
                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
