@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/contexts/AuthContext';
 // import { UserMenu } from '@/components/UserMenu';
-// import { ThemeToggle } from '@/components/ThemeToggle';
+import { ThemeToggle } from '@/components/ThemeToggle';
 // import { AuthModal } from '@/components/AuthModal';
 import {
   Pagination,
@@ -241,9 +241,9 @@ const Index = () => {
               <Briefcase className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">JobSeeker</h1>
             </div>
-            {/* <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4">
               <ThemeToggle />
-              {user ? (
+              {/* {user ? (
                 <UserMenu />
               ) : (
                 <>
@@ -257,8 +257,8 @@ const Index = () => {
                     Sign Up
                   </Button>
                 </>
-              )}
-            </div> */}
+              )} */}
+            </div>
           </div>
         </div>
       </header>
